@@ -61,7 +61,7 @@
         this.news = [];
         this.showLoader(true);
         await axios
-          .get("http://localhost:3000/notification")
+          .get("https://gestao-socios-bmm-api.onrender.com/notification")
           .then((response) => {
             this.showLoader(false);
             let allNews = response.data.body;

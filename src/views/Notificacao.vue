@@ -1,7 +1,7 @@
 <template>
     <section class="scrolling-component" ref="scrollcomponent">
       <section class="container my-body">
-        <h1 class="text-center mt-5">CRIAR NOTIFICAÇÃO/AVISO</h1>
+        <h1 class="text-center mt-5">CRIAR NOTÍCIA / NOTIFICAÇÃO</h1>
         <section
           v-if="isShow"
           role="alert"
@@ -79,7 +79,7 @@
                   id="notifPage"
                 />
                 <label class="form-check-label" for="subscribe_news">
-                  Publicar na página Avisos</label
+                  Publicar na página Noticias</label
                 >
               </section>
             </section>
@@ -89,21 +89,14 @@
           <button
             type="submit"
             v-on:click="createNotif"
-            class="btn btn-outline-primary mt-4 me-4 my-button"
+            class="btn btn-outline-success mt-4 me-4 my-button"
           >
             CRIAR
           </button>
           <button
-            v-on:click="cleanForm"
-            type="button"
-            class="btn btn-outline-primary mt-4 me-4 my-button"
-          >
-            LIMPAR
-          </button>
-          <button
             @click="leave()"
             type="button"
-            class="btn btn-outline-primary mt-4 my-button"
+            class="btn btn-outline-danger mt-4 my-button"
           >
             SAIR
           </button>
@@ -186,7 +179,7 @@
             notifPage: this.form.notifPage,
           };
           await axios
-            .post("http://localhost:3000/notification", postData)
+            .post("https://gestao-socios-bmm-api.onrender.com/notification", postData)
             .then((response) => {
               if (response.data.http == 201) {
                 this.showLoader(false);
@@ -224,7 +217,7 @@
         this.isShow = false;
       },
       leave() {
-        this.$router.replace("/Admin");
+        this.$router.replace("/admin");
       },
       checkForm() {
         if (

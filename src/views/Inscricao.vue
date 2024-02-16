@@ -59,7 +59,7 @@
               placeholder="Insira o username" />
           </section>
           <section class="col-md-4 g-4">
-            <input type="password" v-model="form.auth.password" class="form-control" id="password"
+            <input type="password" v-model="form.password" class="form-control" id="password"
               placeholder="Insira a password" />
           </section>
         </section>
@@ -128,10 +128,8 @@ export default {
         morada: "",
         codigopostal: "",
         freguesia: "",
-        auth: {
-          username: "",
-          password: "",
-        },
+        username: "",
+        password: "",
         notifications: true,
       },
       message: {
@@ -168,7 +166,7 @@ export default {
       if (this.checkForm() == true) {
         this.showLoader(true);
         await axios
-          .post("http://localhost:3000/user", postData)
+          .post("https://gestao-socios-bmm-api.onrender.com/user", postData)
           .then((response) => {
             if (response.data.http == 201) {
               this.showLoader(false);
@@ -209,10 +207,8 @@ export default {
         (this.form.morada = ""),
         (this.form.codigopostal = ""),
         (this.form.freguesia = ""),
-        (this.form.auth = {
-          username: "",
-          password: "",
-        }),
+        (this.form.username = ""),
+        (this.form.password = ""),
         (this.form.notifications = true)
       this.isShow = false
     },

@@ -51,6 +51,5 @@
   </script>
   
   <style scoped>
-  /* Estilos específicos para o componente Acerca podem ser adicionados aqui */
   </style>
   

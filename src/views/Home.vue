@@ -1,18 +1,18 @@
-
 <template>
   <section class="my-body">
-    
   </section>
 </template>
 
 <style scoped>
 .my-body {
   background-image: url('../assets/img.png'); 
-  background-size: contain; 
-  min-height: 100vh;
+  background-size: auto; 
+  min-height: fit-content;
+  min-width: fit-content;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   text-align: center;
-  padding-block: 100px;
+  padding-block: 100%;
   overflow: hidden; 
 }
 
