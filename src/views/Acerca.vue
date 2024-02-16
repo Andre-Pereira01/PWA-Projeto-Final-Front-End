@@ -42,6 +42,13 @@
       </div>
       <img src="../assets/banda.jpg" class="img-fluid mt-4" alt="Banda">
     </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    
   </template>
   
   <script>
